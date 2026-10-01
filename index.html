@@ -104,8 +104,12 @@
     }
     #booking-overlay.open { display: flex; }
     #booking-modal {
-      background: #fff;
-      color: #222;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      color: #fff;
       border-radius: 12px;
       padding: 34px 38px 38px;
       max-width: 680px;
@@ -127,7 +131,7 @@
       border: none;
       font-size: 22px;
       cursor: pointer;
-      color: #444;
+      color: #fff;
       padding: 0;
     }
     .booking-row {
@@ -142,7 +146,7 @@
       font-weight: bold;
       font-size: 17px;
       margin-bottom: 8px;
-      color: #222;
+      color: #fff;
     }
     .booking-field label .req { color: #e0302d; }
     .booking-field input,
@@ -151,17 +155,19 @@
       box-sizing: border-box;
       padding: 13px 16px;
       font-size: 17px;
-      border: 2px solid #ddd;
+      border: 2px solid rgba(255, 255, 255, 0.35);
       border-radius: 12px;
-      color: #333;
-      background: #fff;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
     }
+    .booking-field input::placeholder { color: rgba(255, 255, 255, 0.7); }
+    .booking-field select option { color: #222; background: #fff; }
     .booking-dob { display: flex; gap: 8px; }
     .booking-dob select { flex: 1; }
     #booking-submit {
       margin-top: 8px;
-      background: #222;
-      color: #fff;
+      background: rgba(255, 255, 255, 0.9);
+      color: #111;
       border: none;
       border-radius: 10px;
       padding: 14px 30px;
